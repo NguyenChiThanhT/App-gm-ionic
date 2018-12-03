@@ -1,0 +1,24 @@
+article-list {
+  h2 {
+    font-size: 1.6rem;
+    margin: 0 0 .4rem 0;
+  }
+
+  .author-name {
+    font-size: 90%;
+    color: color($colors, gray, base);
+  }
+
+  .ranking-label {
+    color: color($colors, white, base);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    line-height: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+}

@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{userInfo.attributes.member_name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="profile-setting__head">
+    <div class="profile-detail">
+      <img class="avatar avatar__round avatar__medium" src="{{ avatarSrc }}">
+      <a (click)="goToProfile()" class="button button-trans">
+        マイページを見る
+      </a>
+    </div>
+  </div>
+
+  <div class="profile-setting__body">
+    <div class="setting-group">
+      <div class="setting-group__head">
+        アカウント
+      </div>
+      <div class="setting-group__body">
+        <ion-list>
+          <button ion-item class="setting-item">
+            プロフィール変更
+          </button>
+
+          <button ion-item class="setting-item">
+            メルマガ受信設定
+          </button>
+
+          <button ion-item class="setting-item">
+            メールアドレス変更
+          </button>
+
+          <button ion-item class="setting-item">
+            {{ item }}
+          </button>
+
+          <button ion-item class="setting-item">
+            {{ item }}
+          </button>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+  <div class="profile-setting__footer"></div>
+</ion-content>

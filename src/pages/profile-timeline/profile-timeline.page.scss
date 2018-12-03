@@ -1,0 +1,147 @@
+page-timeline-profile {
+  p,h1,h2,h3,h4,h5{
+    color: $WHITE;
+  }
+
+  hr{
+    width: 60%;
+  }
+
+  .profile__container{
+    /* Temporary User background link, dynamic change on the view */
+    background-image: url('../../assets/imgs/pages/profile/profile_bg.png');
+    background-size: cover;
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+    /* ========== PROFILE TOP SECTION ========== */
+    .profile__top-section{
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    /* ========== PROFILE TOP SECTION - END ========== */
+
+
+
+    /* ========== SOCIAL LINKS SECTION ==========*/
+    .social-link {
+      background-color: $TRANSPARENT !important;
+
+      ion-icon {
+        font-size: 20px;
+        color: $WHITE;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    /* ========== SOCIAL LINKS SECTION - END ==========*/
+
+
+
+    /* ========== SIDE ACTIONS STYLE ========== */
+    .profile__left-action,
+    .profile__right-action{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      button{
+        background-color: transparent;
+        border: 1px solid $WHITE;
+        border-radius: $BORDER_RADIUS;
+      }
+    }
+
+    .profile__left-action{
+      left: 10px;
+    }
+
+    .profile__right-action{
+      right: 10px;
+    }
+    /* ========== SIDE ACTIONS STYLE - END ========== */
+
+
+
+    /* ========= PROFILE STATUS ========== */
+    .profile__member-status{
+      padding-top: 20px;
+
+      p{
+        line-height: 45px;
+      }
+    }
+    /* ========= PROFILE STATUS - END ========== */
+
+
+
+    /* ========== ELEMENT ADJUSTMENT ========== */
+    .profile__top-section,
+    .profile__left-action,
+    .profile__right-action {
+      background-color: $TRANSPARENT !important;
+
+      ion-icon{
+        font-size: $ICON_SIZE;
+        color: $WHITE;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+    /* ========== ELEMENT ADJUSTMENT - END ========== */
+
+  }
+
+  .profile_top-section__right,
+  .profile_top-section__left{
+    button{
+      background-color: $TRANSPARENT;
+    }
+  }
+
+  .profile-timeline__tab{
+    position: relative;
+
+    ion-segment{
+      display: flex;
+
+      ion-segment-button{
+        color: $WHITE;
+
+      }
+
+      .segment-ios .segment-button.segment-activated{
+        background-color: $TRANSPARENT;
+      }
+    }
+  }
+
+  .input-wrapper{
+    .label{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+
+      .author-detail{
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+
+        .avatar{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

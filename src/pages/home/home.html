@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <top-search-bar (onSearchSuccess)="onSearchSuccess($event)"></top-search-bar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToProfilePage()">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <scrollable-segment [items]="segmentItems" (onIonSelect)="onSegmentItemSelected($event)"></scrollable-segment>
+
+  <article-list *ngIf="!isViewingPickupContent" [articles]="articles" [layout]="articleLayout"></article-list>
+
+  <!-- Pickup content  -->
+  <div *ngIf="isViewingPickupContent">
+    <ion-slides [pager]="true" [loop]="true" [centeredSlides]="true">
+      <ion-slide style="background-color: green">
+        <h2>Slide 1</h2>
+      </ion-slide>
+
+      <ion-slide style="background-color: blue">
+        <h2>Slide 2</h2>
+      </ion-slide>
+
+      <ion-slide style="background-color: red">
+        <h2>Slide 3</h2>
+      </ion-slide>
+
+      <ion-item-sliding></ion-item-sliding>
+    </ion-slides>
+
+    <!-- Popular keywords -->
+    <section-title text="注目のキーワード"></section-title>
+
+    <!-- Pickup list -->
+    <section-title text="ピックアップコンテンツ"></section-title>
+    <pickup-list [pickups]="pickups"></pickup-list>
+  </div>
+
+  <search-no-results *ngIf="didSearch && !hasResults"></search-no-results>
+</ion-content>

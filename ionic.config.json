@@ -1,0 +1,7 @@
+{
+  "name": "weboo_app_ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

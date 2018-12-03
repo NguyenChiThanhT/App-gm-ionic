@@ -1,0 +1,57 @@
+.button-ios{
+
+}
+
+button.button,
+a.button{
+  border-radius: $BORDER_RADIUS;
+  font-size: 12px;
+  padding: 5px 10px;
+
+  &.button-default{
+    height: 29px;
+    font-size: 12px;
+
+    ion-icon{
+      margin-right: 4px;
+      font-size: 20px;
+    }
+  }
+
+  &.button-trans{
+    border:1px solid $RED2;
+    background-color: $TRANSPARENT;
+    color: $RED2;
+  }
+
+  &.follow-button{
+    background-color: $WHITE;
+    border:1px solid $RED2;
+    color: $RED2;
+    position: relative;
+    width: 100px;
+    height: 30px;
+
+    .spinner-ios-crescent circle{
+      stroke: $WHITE;
+    }
+
+    ion-spinner{
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.followed {
+      background-color: $RED2;
+      color: $WHITE;
+
+      .spinner-ios-crescent circle{
+        stroke: $RED;
+      }
+    }
+  }
+}

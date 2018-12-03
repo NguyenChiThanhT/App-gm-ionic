@@ -1,0 +1,17 @@
+<ion-grid *ngIf="articles">
+  <ion-row *ngFor="let a of articles; index as i">
+    <ion-col col-4>
+      <span *ngIf="layout === 'ranking'"
+             [style.backgroundColor]="i < 4 ? rankingLabelColors[i] : rankingLabelColors[3] "
+             class="ranking-label">
+        {{i+1}}
+      </span>
+      <img src="{{staticAssetsEndpoint}}{{a.image_url}}"/>
+    </ion-col>
+
+    <ion-col col-8>
+      <h2>{{a.title | ellipsis:30}}</h2>
+      <small class="author-name">{{a.author?.member_name}}</small>
+    </ion-col>
+  </ion-row>
+</ion-grid>

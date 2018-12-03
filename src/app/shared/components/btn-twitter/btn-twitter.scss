@@ -1,0 +1,14 @@
+btn-twitter {
+  .btn {
+    width: 100%;
+    height: 64px;
+    border: none;
+    box-shadow: none;
+    border-radius: $BORDER_RADIUS;
+  }
+
+  .btn-twitter {
+    background-color: $COLOR_BUTTON_TWITTER;
+    text-transform: capitalize;
+  }
+}

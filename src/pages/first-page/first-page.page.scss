@@ -1,0 +1,107 @@
+page-first-page {
+  // Group 4 pictures
+  .content {
+    padding-top: 4px;
+    .group-image {
+      position: relative;
+      height: 323px;
+
+      .image-gr-1 {
+        width: 208px;
+        height: 182px;
+        position: absolute;
+        right: 0;
+      }
+
+      .image-gr-2 {
+        width: 114px;
+        height: 93px;
+        position: absolute;
+        right: 188px;
+        top: 30px;
+      }
+
+      .image-gr-3 {
+        width: 96px;
+        height: 169px;
+        position: absolute;
+        right: 18px;
+        top: 135px;
+      }
+
+      .image-gr-4 {
+        width: 83px;
+        height: 72px;
+        position: absolute;
+        right: 60px;
+        top: 250px;
+      }
+    }
+
+    // Group logo and title
+    .logo-slogan {
+      position: absolute;
+      top: 207px;
+      right: 162px;
+
+      .log {
+        width: 147px;
+        height: 40px;
+      }
+
+      .title {
+        width: 181px;
+        height: 14px;
+        display: block;
+        font-size: 14px;
+        margin-top: 22px;
+      }
+
+      @media only screen and (max-width: 320px) {
+        right: 135px;
+      }
+    }
+  }
+
+  .group {
+    padding: 0 14px 0 14px;
+
+    .btn {
+      width: 100%;
+      height: 50px;
+      border: none;
+      box-shadow: none;
+      border-radius: $BORDER_RADIUS;
+    }
+    .btn-default {
+      border: 1px solid $BORDER_COLOR;
+      color: $COLOR_TEXT;
+      background-color: $WHITE;
+    }
+    .btn-twitter {
+      background-color: $COLOR_BUTTON_TWITTER;
+      text-transform: capitalize;
+    }
+    .btn-facebook {
+      background-color: $COLOR_BUTTON_FACEBOOK;
+      text-transform: capitalize;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+  }
+
+  .group-policy {
+    .policy {
+      color: $COLOR_TEXT;
+      font-size: 12px;
+    }
+    .link {
+      font-weight: bold;
+      color: $COLOR_TEXT;
+      text-decoration: underline;
+    }
+  }
+}

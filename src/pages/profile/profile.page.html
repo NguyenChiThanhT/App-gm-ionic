@@ -1,0 +1,70 @@
+<ion-content>
+  <div class="profile__container">
+    <!-- Top Section -->
+    <div class="profile__top-section" padding>
+      <div class="profile_top-section__left">
+        <button (click)="goBack()" *ngIf="navCtrl.canGoBack()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </div>
+      <div class="profile_top-section__right">
+        <button (click)="goToDetailPage()" *ngIf="memberType == 1">
+          <ion-icon ios="ios-settings-outline" md="md-settings"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="profile__main-content text-center">
+
+      <!-- Member Avatar Image -->
+      <div class="profile__member-avatar">
+        <img class="avatar avatar__round avatar__medium" src="{{ avatarSrc }}" (error)="imageErrorHandling($event)"/>
+      </div>
+
+
+      <!-- Member Name -->
+      <div class="profile__member-name">
+        <h3>
+          {{ userInfo.attributes.member_name ? userInfo.attributes.member_name: '' }}
+        </h3>
+        <button ion-button class="btn btn-default" *ngIf="memberType === 2">
+          <ion-icon ios="ios-person" md="md-person"></ion-icon>
+          フォローする
+        </button>
+      </div>
+
+
+      <!-- Member Social Network List -->
+      <div class="profile__member-social-network">
+        <button class="social-link" (click)="openSocial( userInfo.attributes.facebook_url )">
+          <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
+        </button>
+        <button class="social-link" (click)="openSocial( userInfo.attributes.twitter_url )">
+          <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon>
+        </button>
+        <button class="social-link" (click)="openSocial( userInfo.attributes.instagram_url )">
+          <ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon>
+        </button>
+      </div>
+
+      <hr class="bg-white">
+
+
+      <!-- Member Status -->
+      <div class="profile__member-status">
+        <p>
+          {{ userInfo.attributes.note }}
+        </p>
+      </div>
+
+
+      <!-- Left Action -->
+      <div class="profile__left-action">
+        <button (click)="goToTimelinePage(userInfo.id)">
+          <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

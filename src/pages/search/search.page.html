@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <top-search-bar (onSearchSuccess)="onSearchSuccess($event)"
+                    (onSearchTermEmpty)="onSearchTermEmpty($event)"
+                    [searchTerm]="searchTerm">
+    </top-search-bar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- Search by popular keywords & recent keywords -->
+  <div *ngIf="!didSearch">
+    <!-- Popular keywords -->
+    <section-title text="人気検索ワード"></section-title>
+
+    <!-- Recent keywords -->
+    <section-title text="最近検索したワード"></section-title>
+    <ion-list>
+      <button *ngFor="let t of recentSearchTerms?.slice().reverse()"
+              ion-item
+              (click)="doSearch(t)">
+        {{t}}
+      </button>
+    </ion-list>
+  </div>
+
+  <!-- Search results -->
+  <div *ngIf="didSearch">
+    <article-list *ngIf="hasResults" [articles]="articles"></article-list>
+
+    <search-no-results *ngIf="!hasResults"></search-no-results>
+  </div>
+
+</ion-content>

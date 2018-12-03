@@ -1,0 +1,98 @@
+page-login {
+
+  ion-navbar {
+    ion-icon{
+      color: $RED;
+    }
+
+    & ion-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 16px;
+
+      .toolbar-title{
+        color: $RED;
+      }
+    }
+
+    & .btn-registry {
+      font-size: 14px;
+      color: $COLOR_TEXT;
+    }
+  }
+
+  ion-content {
+    .scroll-content {
+      padding: 0 !important;
+
+      ion-list {
+        margin-bottom: 0;
+        & ion-item {
+          padding-left: 0;
+
+          .item-inner {
+            padding-left: 16px;
+
+            ion-label, ion-input {
+              font-size: 12px;
+            }
+          }
+        }
+
+      }
+    }
+
+    .contain-button {
+      padding: 16px 16px;
+
+      section-title {
+        & h3 {
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+      }
+
+      .btn {
+        height: 64px;
+        border: none;
+      }
+
+      .btn-signin {
+        border: 1px solid;
+        font-size: 16px;
+        background-color: $WHITE;
+        color: $RED;
+        font-weight: bold;
+      }
+
+      .btn-forgot-pwd {
+        font-size: 12px;
+        background-color: #F1F1F1;
+        color: $COLOR_TEXT;
+        margin-top: 5px;
+      }
+
+      section-title {
+        padding: 0 16px;
+      }
+
+      .btn-twitter {
+        background-color: $COLOR_BUTTON_TWITTER;
+        text-transform: capitalize;
+      }
+
+      .btn-facebook {
+        background-color: $COLOR_BUTTON_FACEBOOK;
+        text-transform: capitalize;
+      }
+
+      .icon {
+        margin-right: 8px;
+      }
+    }
+  }
+}

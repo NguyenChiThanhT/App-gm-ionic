@@ -1,0 +1,6 @@
+<ion-segment no-padding color="primary">
+  <ion-segment-button *ngFor="let i of items" [value]="i.value"
+                      (ionSelect)="selectItem(i)">
+    {{i.label}}
+  </ion-segment-button>
+</ion-segment>

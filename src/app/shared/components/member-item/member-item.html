@@ -1,0 +1,12 @@
+<div ion-item class="member-item">
+  <a (click)="goToProfilePage(memberDetail.id)" class="author-detail">
+    <img src="{{ memberDetail.avatar }}" class="avatar avatar__small avatar__round"
+         (error)=" templateService.handleErrorAvatar($event) ">
+    <p class="author-name">{{ memberDetail.name  }}</p>
+  </a>
+  <a [ngClass]="{ 'button follow-button': true ,'followed': memberDetail.followUser }"
+     (click)="followAction($event, memberDetail)">
+    <span *ngIf="!memberDetail.loading">フォローする</span>
+    <ion-spinner name="crescent" *ngIf="memberDetail.loading"></ion-spinner>
+  </a>
+</div>

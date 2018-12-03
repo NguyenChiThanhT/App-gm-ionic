@@ -1,0 +1,9 @@
+<ion-grid *ngIf="pickups">
+  <ion-row *ngFor="let p of pickups; index as i">
+    <ion-col col-12>
+      <img src="{{staticAssetsEndpoint}}{{p.image}}"/>
+      <h2>{{p.title}}</h2>
+      <p>{{p.description}}</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>

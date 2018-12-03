@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      ログイン
+    </ion-title>
+
+    <ion-buttons end>
+      <button class="btn-registry" ion-button (click)="goToSignUpPage()">
+        会員登録
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding no-bounce>
+  <form (submit)="doLogin()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>メールアドレス</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email" placeholder="山田太郎"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>パスワード</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password" placeholder="英数字のパスワード"></ion-input>
+      </ion-item>
+
+      <div class="contain-button">
+        <button class="btn btn-signin" ion-button block>ログイン</button>
+        <button class="btn btn-forgot-pwd" ion-button block outline>パスワードをお忘れの方</button>
+      </div>
+    </ion-list>
+  </form>
+
+
+  <div class="contain-button">
+    <section-title text="SNSでログイン"></section-title>
+    <btn-twitter></btn-twitter>
+    <btn-facebook></btn-facebook>
+  </div>
+</ion-content>

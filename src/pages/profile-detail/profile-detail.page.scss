@@ -1,0 +1,37 @@
+page-profile-detail{
+  p{
+    color: $RED;
+  }
+
+
+
+  .profile-setting__head{
+    .profile-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0;
+      .avatar {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .profile-setting__body{
+    .setting-group{
+      .setting-group__head {
+        text-align: center;
+        background-color: #F6F6F6;
+        height: 50px;
+        line-height: 50px;
+        color: $BLACK;
+        font-weight: 600;
+      }
+
+      .setting-group__body {
+
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="content">
+    <div class="group-image">
+      <img class="image-gr-1" src="../../assets/imgs/pages/first-page/group-1.png">
+      <img class="image-gr-2" src="../../assets/imgs/pages/first-page/group-2.png">
+      <img class="image-gr-3" src="../../assets/imgs/pages/first-page/group-3.png">
+      <img class="image-gr-4" src="../../assets/imgs/pages/first-page/group-4.png">
+    </div>
+
+    <div class="logo-slogan">
+      <img class="log" src="../../assets/imgs/logo.png" alt="logo">
+      <h1 class="title">自分でつくる。ウィーブー</h1>
+    </div>
+  </div>
+
+  <div class="group">
+    <button class="btn btn-default" ion-button (click)="goToHomePage()">利用開始</button>
+    <button class="btn btn-default" ion-button>ウィーブーログイン</button>
+
+    <!-- Button facebook, twitter -->
+    <btn-twitter></btn-twitter>
+    <btn-facebook></btn-facebook>
+
+  </div>
+
+  <div class="group group-policy">
+    <p class="policy">
+      利用を開始することて <br/>
+      <a href="#" (click)="onOpenWebview('https://weboo.link/legal/?sp=1')"><strong>利用規約、</strong></a>
+      <a href="#" (click)="onOpenWebview('https://weboo.link/privacy/?sp=1')"><strong>プライバシー</strong></a>ポリシーに同意するものとします。
+    </p>
+  </div>
+</ion-content>
