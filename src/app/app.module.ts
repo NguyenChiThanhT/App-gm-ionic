@@ -20,6 +20,7 @@ import { ProfileDetailPageModule } from '../pages/profile-detail/profile-detail.
 import { ProfileTimelinePageModule } from '../pages/profile-timeline/profile-timline.module';
 import { SplashPageModule } from '../pages/splash/splash.module';
 import { NewPostSelectPageModule } from "../pages/new-post-select/new-post-select.module";
+import {FavoritePageModule} from "../pages/favorite/favorite-page.module";
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { NewPostSelectPageModule } from "../pages/new-post-select/new-post-selec
     SplashPageModule,
     SearchPageModule,
     NewPostSelectPageModule,
+    FavoritePageModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],

@@ -5,6 +5,7 @@ import { LoginPage } from '../login/login.page';
 import { HomePage } from '../home/home';
 import { SearchPage } from '../search/search.page';
 import { NewPostSelectPage } from "../new-post-select/new-post-select.page";
+import {FavoritePage} from "../favorite/favorite-page.page";
 
 
 @Component({
@@ -16,7 +17,7 @@ export class TabsPage {
   tab1Root: any = HomePage;
   tab2Root: any = NewPostSelectPage;
   tab3Root: any = SearchPage;
-  tab4Root: any = HomePage;
+  tab4Root: any = FavoritePage;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,

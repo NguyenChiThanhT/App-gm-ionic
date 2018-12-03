@@ -1,0 +1,36 @@
+page-favorite {
+  ion-segment {
+    display: flex;
+  }
+
+  .toolbar-title {
+    color: $RED;
+  }
+
+  .toolbar-background {
+    background-color: white;
+  }
+
+  .header-md::after,
+  .tabs-md[tabsPlacement="top"] > .tabbar::after,
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height: 1px;
+  }
+
+  .segment-md.segment-disabled, .segment-md .segment-button-disabled {
+    opacity: 2;
+  }
+
+  .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+    border-color: $RED;
+  }
+
+  .segment-md .segment-button {
+    color: $RED;
+  }
+
+  .searchbar-input {
+    background-color: #F2F2F3 !important;
+  }
+}

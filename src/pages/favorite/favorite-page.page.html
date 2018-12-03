@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="text-center" color="pink-red">お気に入り</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="selectedSegment" disabled>
+    <ion-segment-button value="favorite">
+      記事
+    </ion-segment-button>
+    <ion-segment-button value="hiden"></ion-segment-button>
+  </ion-segment>
+  <ion-searchbar
+    placeholder="大阪"
+    cancelButtonText="キャンセル"
+    [(ngModel)]="searchTerm"
+    [showCancelButton]="true"
+    (ionInput)="onSearchTermChanged()"
+    >
+  </ion-searchbar>
+  <div [ngSwitch]="selectedSegment">
+    <ion-list *ngSwitchCase="'favorite'">
+      <article-list [articles]="articles" [layout]="articleLayout"></article-list>
+    </ion-list>
+  </div>
+  <search-no-results *ngIf="didSearch && !hasResults"></search-no-results>
+</ion-content>
